@@ -17,4 +17,3 @@ In this project, we provide a function which reads a file content and displays a
 ## How to run
 - Compile : `./scripts/compile.sh`
 - Run : `./scripts/run.sh`
-# tsdl

@@ -1,0 +1,25 @@
+GENDER,AGE,MARITAL_STATUS,PROFESSION,IS_TENT,PRODUCT_LINE,PURCHASE_AMOUNT
+M,27,Single,Professional,TRUE,Camping Equipment,144.78
+F,39,Married,Other,FALSE,Outdoor Protection,144.83
+F,39,Married,Other,FALSE,Outdoor Protection,137.37
+F,56,Unspecified,Hospitality,FALSE,Personal Accessories,92.61
+M,45,Married,Retired,FALSE,Golf Equipment,119.04
+M,45,Married,Retired,FALSE,Golf Equipment,123.76
+F,39,Married,Other,FALSE,Outdoor Protection,142.23
+F,49,Married,Other,FALSE,Golf Equipment,105.96
+F,49,Married,Other,FALSE,Golf Equipment,109.21
+M,47,Married,Retired,FALSE,Golf Equipment,117.58
+M,47,Married,Retired,FALSE,Golf Equipment,115.03
+M,21,Single,Retail,FALSE,Personal Accessories,112.03
+F,66,Married,Other,FALSE,Golf Equipment,108.11
+F,35,Married,Professional,FALSE,Golf Equipment,152.95
+M,20,Single,Sales,TRUE,Mountaineering Equipment,124.66
+M,20,Single,Sales,TRUE,Mountaineering Equipment,122.39
+M,20,Single,Sales,TRUE,Mountaineering Equipment,121.39
+F,37,Single,Other,FALSE,Outdoor Protection,134.94
+M,42,Married,Other,FALSE,Outdoor Protection,156.33
+F,24,Married,Retail,TRUE,Personal Accessories,97.31
+F,24,Married,Retail,TRUE,Personal Accessories,99.36
+M,29,Single,Retail,FALSE,Camping Equipment,122.40
+M,29,Single,Retail,FALSE,Camping Equipment,122.90
+M,43,Married,Trades,TRUE,Camping Equipment,169.26

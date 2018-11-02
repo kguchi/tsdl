@@ -1,0 +1,62 @@
+レビューアーの皆様からのコメント
+
+
+高橋さん
+ReverseFileApplication.java
+String stateをintで定義した方がよい。
+stringの場合"==" は.equalsで比較する必要あり
+ContinueChecker.java
+private String dottedLine > private static final にすればクラスinstance作成したごとにインスタンス作られない
+dottedLine > DOTTEDLINE 定数なので大文字で定義したほうがよい（好み？）
+continueOrExit
+state = ... / return stateは代入不要。return ... と書けばいい
+outputLastMessage:
+同じ処理の繰り返しはメソッドを別に定義しよう。
+TextFileOperator
+private File file は不要。readFileの引数として渡せばよい
+readFile()
+exception発生時は空のリストが返されるが、ReverseFileApplicationではnullかどうかでエラーを判定しているので、整合性がとれていない。nullを返すかか空チェクを実施するかのどちらかに合わせるべき
+FileListOperator
+l.65 Arrays.asList(Config.fileExtensions)は不変なので定数としてconfigの中に定義したほうがよい
+selectFile
+空のリストが渡されたとき(/filesフォルダーが空のとき）に無限ループに陥るので、ループを抜けることが必要
+
+
+林田さん
+Config.java
+@param コメントは定数の上に書いたほうがよい？
+UTF-8はJavaで定義された定数があるはず。
+ContinueChecker.java
+メソッドの上に書くコメントはメソッドの引数なので、コメントの場所を変える
+l.13 typo
+FileListOperator.java
+例外がスローされないので@throws は間違い。例外をスローして呼び出し側で処理する方法もあり
+File[] files = fileDir.listFiles()はファイルないときnullが返されるので、null check必要
+ReverseFileApplication.java
+{@code fileList} は不要？
+TextFileOperator.java
+l.41 new ArrayList<String>  の <String>要らない
+catch (IOException)とcatch(Exception)は処理が一緒。
+typo for variable 
+
+
+多田さん
+TextFileOperator.java
+class の前に何もついていないのは意図的？（同一パッケージでしか参照できない）。ReverseFileApplicationはpublic
+methodがprotectedになっているのは？protectedがついているのとついていないのは意味が少し違う。
+ArrayList<String> lineList = new ArrayList<String>としたほうがよい。
+この形だとListクラスになくてArrayListにあるメソッドを呼べない。l.38でList<String>を返しているのは間違いではない
+スペースとタブが混ざっている
+e.printStackTrace()だけで終わると呼び出し元にエラーの状況が伝わらないので、throw Exceptionでエラーを返したほうがよい。他のメソッドも同様
+ContinueChecker.java
+outputLastMessage
+if-elseではなくswitchで書いてもいいのでは？
+Javadocの書き方に従ったコメントを書いてほしい
+
+
+関口さん
+井上さんコメントで入力機能が複数のクラスにまたがっているのが変というコメントがあったがどうなのか？
+ユーザーインプットを受け付ける用の別クラスを作るのがよさそう。
+ContinueCheckerにまとめてもいいかも。名前はInputChecker等に変更する
+
+
